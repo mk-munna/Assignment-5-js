@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>MK Ticket</title>
     <!-- Daisy Ui and Tailwind CSS connect -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -29,16 +29,11 @@
         .bg-green {
             background-color: #1DD100;
         }
-
-        input[type=radio]:checked {
-            background-color: #1DD100 !important;
-            color: white;
-            border: none;
-        }
     </style>
 </head>
 
-<body class="max-w-[360px] mx-auto lg:max-w-full">
+<body class="max-w-[360px] mx-auto lg:max-w-full overflow-x-hidden">
+    <div>
     <header class="lg:max-w-6xl mx-auto mt-10">
         <nav class="flex lg:gap-[226px] gap-[100px]">
             <h3 class="text-black font-bold text-2xl">MK Ticket</h3>
@@ -55,15 +50,15 @@
                 &nbsp;<img class="mt-1" width="25px" src="images/bus-icon.png" alt=""></button>
         </nav>
         <div class=" rounded-3xl lg:mt-10 mt-6 bg-[url(images/banner.png)] lg:h-[550px] h-[320px] bg-cover flex flex-col justify-center">
-            <p class="font-bold font2 text-xl mt-10 lg:mt-0 lg:text-6xl text-center text-white">End-to-End Travel with <br><span
+            <p class="font-bold font2 text-3xl mt-10 lg:mt-0 lg:text-6xl text-center text-white">End-to-End Travel with <br><span
                     class="text-[#1DD100]">Mk Paribahan</span></p>
             <p class="font1 text-center lg:w-[691px]  mx-auto lg:mt-5 text-white">Embark on a journey of a lifetime with our
                 curated
                 travel guides, expert tips, and immersive experiences for
                 unforgettable adventures worldwide.</p>
-            <button class="pt-4 mt-4 rounded-xl pr-8 pb-4 pl-8 bg-[#1DD100] w-[170px] mx-auto">Buy Tickets</button>
+            <a class=" w-[170px] mx-auto" href="#functional-section"><button class="pt-4 mt-8 rounded-xl pr-8 pb-4 pl-8 bg-[#1DD100]">Buy Tickets</button></a>
         </div>
-        <div class="lg:absolute lg:top-[610px] lg:left-40 lg:flex gap-6">
+        <div class="lg:absolute lg:top-[610px] lg:left-40 flex flex-col lg:flex-row gap-6">
             <!-- first div -->
             <div
                 class=" flex justify-center items-center bg-slate-50 lg:w-[308px] h-[138px] border-b-2 rounded-2xl border-solid border-[#1DD100]">
@@ -91,8 +86,6 @@
             </div>
         </div>
     </header>
-
-
 
     <!-- offer section -->
     <div class=" lg:mt-[200px] mt-12 lg:max-w-6xl mx-auto">
@@ -137,7 +130,7 @@
 
     <!-------------------------- container functional section ----------------------------->
     <div class="lg:mt-32 mt-10 border-t-2 border-[#1DD100] rounded-3xl h-[2208px] bg-[#F7F8F8] lg:pt-28 pt-10">
-        <h3 class="font-bold lg:text-5xl text-3xl font2 text-center">Mk Paribahan</h3>
+        <h3 id="functional-section" class="cursor-default font-bold lg:text-5xl text-3xl font2 text-center">Mk Paribahan</h3>
         <p class="lg:w-[736px] mx-auto text-center p-2 lg:p-0 lg:mt-6">Streamline your travels with our comprehensive bus and train
             transport services. Enjoy convenience, reliability, and
             memorable journeys on every route.</p>
@@ -159,7 +152,7 @@
                         <div><!-- button div  -->
                             <button
                                 class="flex gap-2 font1 mt-4 lg:mt-0 font-[500] text-[#1DD100] bg-[#1DD10026] px-5 py-3 rounded-xl"><img
-                                    src="images/seat-green.png" alt=""><span>40</span>Seats left</button>
+                                    src="images/seat-green.png" alt=""><span id="leftSeat">40</span>Seats left</button>
                         </div>
                     </div>
                     <!-- inner div of first div -->
@@ -208,7 +201,7 @@
                     </div>
                     <div class="lg:w-[570px] w-[300px] flex justify-end"><!-- drive div -->
                         <div class="mt-6 w-[100px] h-[50px] bg-gray-200 rounded-lg flex justify-center items-center">
-                            <img width="30px" src="images/drive.png" alt="">
+                            <img class="opacity-70" width="30px" src="images/drive.png" alt="">
                         </div>
                     </div>
                     <!-- seats -->
@@ -228,46 +221,46 @@
                         <!-- seat buttom -->
                         <div class="grid grid-cols-4 gap-x-2 lg:gap-x-10 gap-y-2 lg:gap-y-8">
 
-                            <input type="radio" aria-label="A1" class="btn w-[56px] lg:w-[100px] h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="A2" class="btn w-[56px] lg:w-[100px] h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="A3" class="btn w-[56px] lg:w-[100px] h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="A3" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="A4" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="B1" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="B2" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="B3" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="C1" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="C2" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="C3" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="C4" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="D1" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="D2" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="D3" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="D4" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="E1" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="E2" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="E3" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="E4" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="F1" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="F2" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="F3" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="F4" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="G1" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="G2" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="G3" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="G4" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="H1" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="H2" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="H3" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="H4" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="I1" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="I2" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="I3" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="I4" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="J1" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="J2" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="J3" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
-                            <input type="radio" aria-label="J4" class="btn w-[56px] lg:w-[100px]  h-[20px] lg:h-[50px]" />
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">A1</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">A2</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">A3</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">A4</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">B1</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">B2</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">B3</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">B4</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">C1</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">C2</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">C3</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">C4</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">D1</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">D2</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">D3</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">D4</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">E1</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">E2</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">E3</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">E4</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">F1</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">F2</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">F3</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">F4</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">G1</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">G2</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">G3</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">G4</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">H1</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">H2</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">H3</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">H4</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">I1</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">I2</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">I3</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">I4</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">J1</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">J2</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">J3</button>
+                            <button class="seat btn w-[56px] lg:w-[100px]  h-[50px] lg:h-[50px]">J4</button>
                         </div>
                     </div>
                 </div>
@@ -275,10 +268,10 @@
 
                 <!-- -----------------------------seat calculation -->
                 <div class="lg:border-l-2 ml-[-30px] lg:ml-0 border-dashed pl-8">
-                    <div class="font2 text-2xl font-semibold pb-6 border-b-2 border-dashed">Purchase your seat</div>
-                    <div class="bg-[#F7F8F8] h-[420px] w-[320px] lg:w-[450px] mt-8 rounded-xl p-8">
+                    <div class="font2 text-2xl font-semibold pb-6 border-b-2 border-dashed">Purchase your seat <small class=" hidden lg:inline-block text-[12px]">(You can get only 4 seat at a time)</small></div>
+                    <div class="bg-[#F7F8F8] ml-[-10px] lg:ml-0 h-[420px] w-[320px] lg:w-[450px] mt-8 rounded-xl p-8">
                         <div class="flex justify-between pb-4 font-medium font1">
-                            <span>Seat <span class="bg-green px-3 rounded-md text-white">0</span></span>
+                            <span>Seat <span class="bg-green px-3 rounded-md text-white" id="seat-count">0</span></span>
                             <span class="ml-[-30px]">Class</span>
                             <span>Price</span>
                         </div>
@@ -289,38 +282,45 @@
                                 <p class="mb-4">3.</p>
                                 <p class="mb-4">4.</p>
                             </div>
-                            <div id="ticket">
-                                <div class="flex gap-[53px]  lg:gap-[120px] mb-4">
-                                    <p>A1</p>
-                                    <p>Economy</p>
-                                    <p>$100</p>
+                            <div class="flex gap-14 lg:gap-32">
+                                <div id="seat-name" class="flex flex-col gap-4">
+                                    
                                 </div>
-                                <!--  -->
+                                <div id="category" >
+                                    
+                                </div>
                             </div>
                         </div>
                         <!-- div total price -->
                         <div class="flex justify-between h-14 pt-3">
                             <p class="font-medium font1">Total price</p>
-                            <p class="font-medium font1">BDT <span class="total-price">0</span></p>
+                            <p class="font-medium font1">BDT <span id="total-price">0</span></p>
                         </div>
                         <!-- coupon -->
-                        <div>
-                            <input type="text" placeholder="Have any copupon?"
+                        <div class="" id="coupon-div">
+                            <input id="coupon-input" type="text" placeholder="Have any copupon?"
                                 class="input input-bordered w-full border-none " disabled /><button
-                                class="absolute right-12 lg:right-[126px] bg-green px-4 py-2 rounded-md text-white m-1"
-                                disabled>Apply</button>
+                                class="absolute ml-[-80px] mt-1 bg-[#0499046e] px-4 py-2 rounded-md text-white"
+                                disabled id="coupon-btn">Apply</button>
+                        </div>
+                        <div id="discount-div" class="hidden">
+                            <div class="flex justify-between h-14 pt-3">
+                                <p class="font1 font-medium ">✅ <span class="italic">Discount Amount</span> </p>
+                                <p class="font1 font-medium">BDT <span id="discount-amount">0</span></p>
+                            </div>
+                        
                         </div>
                         <!-- grand total -->
                         <div>
                             <div class="flex justify-between h-14 pt-3">
                                 <p class="font1 font-medium">Grand total</p>
-                                <p class="font1 font-medium">BDT <span class="grand-total">0</span></p>
+                                <p class="font1 font-medium">BDT <span id="grand-total">0</span></p>
                             </div>
 
                         </div>
                     </div>
                     <!-- form -->
-                    <div class="mt-8">
+                    <div class="mt-8  ml-[-10px] lg:ml-0 ">
                     <!-- input name -->
                         <div>
                             <label class="font-semibold font1" for="name">Passenger Name* </label><br>
@@ -332,9 +332,8 @@
                         <div class="mt-6">
                             <label class="font-semibold font1 " for="name">Phone Number*</label><br>
 
-                        <input
-                            class="w-[320px]  mt-4 p-5 text-black bg-black lg:w-[450px] h-16  bg-opacity-5 rounded-xl outline-none"
-                            type="number" id="" name="phoneNumber" placeholder="Enter your phone number" required>
+                        <input class="w-[320px]  mt-4 p-5 text-black bg-black lg:w-[450px] h-16  bg-opacity-5 rounded-xl outline-none"
+                            type="number" id="input-phone" name="phoneNumber" placeholder="Enter your phone number" required>
                         </div>
                         <!-- input email -->
                         <div class="mt-6">
@@ -344,7 +343,7 @@
                         </div>
                         <!-- submit button -->
                         <div class="mt-6">
-                            <button class="bg-green text-xl font-bold text-white h-16 w-[320px] lg:w-[450px] rounded-xl">Next</button>
+                            <button onclick="alertForPhoneNumber()" id="next-btn" disabled  class=" bg-[#0499046e] text-xl font-bold text-white h-16 w-[320px] lg:w-[450px] rounded-xl ">Next <span id="tooltip" class="text-gray-200 text-xs bg-black p-1 absolute z-10 right-12 mt-6 invisible ">You must select a seat and fillup phone number</span></button>
                         </div>
                         <!-- terms and condition -->
                         <div class="flex gap-32 mt-6 ml-5">
@@ -360,8 +359,6 @@
             <!-- functional div end -->
         </div>
 <!--done   -->
-
-
 
 <footer class="bg-[#13132c] py-[120px]">
     <div class="max-w-[320px] text-center lg:text-left lg:max-w-6xl mx-auto">
@@ -391,6 +388,10 @@
         </div>
     </div>
 </footer>
+</div>
+
 <!-- Alhamdulillah Done -->
+<script src="utilities.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
