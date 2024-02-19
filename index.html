@@ -45,9 +45,9 @@
                     <li class="cursor-pointer">Search</li>
                 </ul>
             </div>
-            <button
+            <a href="#bus"><button
                 class="flex text-xl font-bold justify-center bg-[#1DD1001A] bg-opacity-10 pt-2 pr-8 pb-2 pl-8 rounded-lg font2">Bus
-                &nbsp;<img class="mt-1" width="25px" src="images/bus-icon.png" alt=""></button>
+                &nbsp;<img class="mt-1" width="25px" src="images/bus-icon.png" alt=""></button></a>
         </nav>
         <div class=" rounded-3xl lg:mt-10 mt-6 bg-[url(images/banner.png)] lg:h-[550px] h-[320px] bg-cover flex flex-col justify-center">
             <p class="font-bold font2 text-3xl mt-10 lg:mt-0 lg:text-6xl text-center text-white">End-to-End Travel with <br><span
@@ -177,7 +177,7 @@
                 <div class="hidden">
                     <img src="images/info-devider.png" alt="">
                 </div>
-                <div class="flex flex-col justify-center items-center  p-8">
+                <div class="flex w-full flex-col justify-center items-center  p-8">
                     <img src="images/fare.png" alt="">
                     <p class="font2 text-2xl font-bold">550 TAKA</p>
                     <p>per Seat</p>
@@ -185,13 +185,10 @@
             </div>
 
 
-
-
-
             <!-- div second main -->
             <div class="mt-6 p-8 bg-white rounded-3xl flex flex-col lg:flex-row gap-6">
                 <div class="lg:w-[620px] w-[320px]">
-                    <p class="font2 text-2xl font-semibold">Select Your Seat</p>
+                    <p id="bus" class="font2 text-2xl font-semibold">Select Your Seat</p>
                     <div class="lg:w-[550px] mt-6 flex justify-between border-t-2 border-b-2 border-dashed">
                         <!-- available and section div  -->
                         <div class="flex py-6"><img src="images/seat-gray.png" alt=""> <span>&nbsp;Available</span>
@@ -326,7 +323,7 @@
                             <label class="font-semibold font1" for="name">Passenger Name* </label><br>
                             <input
                                 class=" mt-4 p-5 text-black bg-black lg:w-[450px] w-[320px] h-16  bg-opacity-5 rounded-xl outline-none"
-                                type="text" id="" name="" placeholder="Enter your name">
+                                type="text" id="input-name" name="" placeholder="Enter your name">
                         </div>
                         <!-- input phone number -->
                         <div class="mt-6">
@@ -339,7 +336,7 @@
                         <div class="mt-6">
                             <label class="font-semibold font1" for="name">Email ID</label><br>
                             <input class="w-[320px]  mt-4 p-5 text-black bg-black lg:w-[450px] h-16  bg-opacity-5 rounded-xl outline-none" type="email"
-                                id="" name="" placeholder="Enter your email">
+                                id="input-email" name="" placeholder="Enter your email" required>
                         </div>
                         <!-- submit button -->
                         <div class="mt-6">
