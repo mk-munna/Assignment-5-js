@@ -71,7 +71,7 @@ document.getElementById('coupon-btn').addEventListener('click', function () {
 
     }
     else {
-        alert('Please input a valid discount code');
+        alert('Please enter a valid coupon code');
         return;
     }
 })
